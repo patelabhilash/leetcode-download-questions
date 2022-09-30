@@ -64,8 +64,13 @@ def main():
   
   global htmlstr
   htmlstr += '</div>'
-  HTML(string=htmlstr).write_pdf('blind_75.pdf')
+  # HTML(string=htmlstr).write_pdf('blind_75.pdf')
 
+  text_file = open("leetcode.html", "w")
+  #write string to file
+  n = text_file.write(htmlstr)
+  #close file
+  text_file.close()
 
 if __name__=='__main__':
   print('\n')
