@@ -42,3 +42,17 @@ all_links.forEach(function(val) {
 });
 console.log(problems_str)
 ```
+
+### get list
+
+To get all questions link list, visit this URL 'https://leetcode.com/problemset/algorithms/', open up the dev console and run following code:
+
+```
+var links = document.getElementsByTagName('a');
+var all_links =  Array.prototype.slice.call(links);
+var p = [];
+all_links.forEach(function(val){
+     val.href.includes('problems/') && p.push(val.href);
+});
+console.log(p.join("\r\n"));
+```
